@@ -14,6 +14,7 @@
 		370FA51623B2FDAB005BA8AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370FA51523B2FDAB005BA8AE /* Assets.xcassets */; };
 		370FA51923B2FDAB005BA8AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370FA51723B2FDAB005BA8AE /* LaunchScreen.storyboard */; };
 		370FA51C23B2FDAB005BA8AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 370FA51B23B2FDAB005BA8AE /* main.m */; };
+		370FA52523B308DD005BA8AE /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 370FA52423B308DD005BA8AE /* Person.m */; };
 		555796636C713AF5718C4816 /* libPods-SynProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B70628AAD4E2068878B6536C /* libPods-SynProject.a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,8 @@
 		370FA51823B2FDAB005BA8AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		370FA51A23B2FDAB005BA8AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		370FA51B23B2FDAB005BA8AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		370FA52323B308DD005BA8AE /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		370FA52423B308DD005BA8AE /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		37787787FC8654B0A5B77B44 /* Pods-SynProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SynProject/Pods-SynProject.release.xcconfig"; sourceTree = "<group>"; };
 		A25A8224AD1CBB9F4FDDE812 /* Pods-SynProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SynProject/Pods-SynProject.debug.xcconfig"; sourceTree = "<group>"; };
 		B70628AAD4E2068878B6536C /* libPods-SynProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SynProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +85,7 @@
 				370FA50D23B2FDA8005BA8AE /* SceneDelegate.m */,
 				370FA50F23B2FDA8005BA8AE /* ViewController.h */,
 				370FA51023B2FDA8005BA8AE /* ViewController.m */,
+				370FA52223B3086B005BA8AE /* BasicPoint */,
 				370FA51223B2FDA8005BA8AE /* Main.storyboard */,
 				370FA51523B2FDAB005BA8AE /* Assets.xcassets */,
 				370FA51723B2FDAB005BA8AE /* LaunchScreen.storyboard */,
@@ -89,6 +93,15 @@
 				370FA51B23B2FDAB005BA8AE /* main.m */,
 			);
 			path = SynProject;
+			sourceTree = "<group>";
+		};
+		370FA52223B3086B005BA8AE /* BasicPoint */ = {
+			isa = PBXGroup;
+			children = (
+				370FA52323B308DD005BA8AE /* Person.h */,
+				370FA52423B308DD005BA8AE /* Person.m */,
+			);
+			path = BasicPoint;
 			sourceTree = "<group>";
 		};
 		E30818720555E0E5BD146875 /* Pods */ = {
@@ -194,6 +207,7 @@
 			files = (
 				370FA51123B2FDA8005BA8AE /* ViewController.m in Sources */,
 				370FA50B23B2FDA8005BA8AE /* AppDelegate.m in Sources */,
+				370FA52523B308DD005BA8AE /* Person.m in Sources */,
 				370FA51C23B2FDAB005BA8AE /* main.m in Sources */,
 				370FA50E23B2FDA8005BA8AE /* SceneDelegate.m in Sources */,
 			);
