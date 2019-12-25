@@ -14,6 +14,7 @@
 		370FA51623B2FDAB005BA8AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370FA51523B2FDAB005BA8AE /* Assets.xcassets */; };
 		370FA51923B2FDAB005BA8AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370FA51723B2FDAB005BA8AE /* LaunchScreen.storyboard */; };
 		370FA51C23B2FDAB005BA8AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 370FA51B23B2FDAB005BA8AE /* main.m */; };
+		555796636C713AF5718C4816 /* libPods-SynProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B70628AAD4E2068878B6536C /* libPods-SynProject.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,9 @@
 		370FA51823B2FDAB005BA8AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		370FA51A23B2FDAB005BA8AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		370FA51B23B2FDAB005BA8AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37787787FC8654B0A5B77B44 /* Pods-SynProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SynProject/Pods-SynProject.release.xcconfig"; sourceTree = "<group>"; };
+		A25A8224AD1CBB9F4FDDE812 /* Pods-SynProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SynProject/Pods-SynProject.debug.xcconfig"; sourceTree = "<group>"; };
+		B70628AAD4E2068878B6536C /* libPods-SynProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SynProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +40,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555796636C713AF5718C4816 /* libPods-SynProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A47F1D7F01A6D9743F5BCF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B70628AAD4E2068878B6536C /* libPods-SynProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		370FA4FD23B2FDA7005BA8AE = {
 			isa = PBXGroup;
 			children = (
 				370FA50823B2FDA8005BA8AE /* SynProject */,
 				370FA50723B2FDA8005BA8AE /* Products */,
+				E30818720555E0E5BD146875 /* Pods */,
+				2A47F1D7F01A6D9743F5BCF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +91,15 @@
 			path = SynProject;
 			sourceTree = "<group>";
 		};
+		E30818720555E0E5BD146875 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A25A8224AD1CBB9F4FDDE812 /* Pods-SynProject.debug.xcconfig */,
+				37787787FC8654B0A5B77B44 /* Pods-SynProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +107,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 370FA51F23B2FDAB005BA8AE /* Build configuration list for PBXNativeTarget "SynProject" */;
 			buildPhases = (
+				2B43BDFA306F3210B48CD28A /* [CP] Check Pods Manifest.lock */,
 				370FA50223B2FDA8005BA8AE /* Sources */,
 				370FA50323B2FDA8005BA8AE /* Frameworks */,
 				370FA50423B2FDA8005BA8AE /* Resources */,
@@ -140,6 +165,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B43BDFA306F3210B48CD28A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SynProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		370FA50223B2FDA8005BA8AE /* Sources */ = {
@@ -287,6 +333,7 @@
 		};
 		370FA52023B2FDAB005BA8AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A25A8224AD1CBB9F4FDDE812 /* Pods-SynProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +351,7 @@
 		};
 		370FA52123B2FDAB005BA8AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37787787FC8654B0A5B77B44 /* Pods-SynProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
